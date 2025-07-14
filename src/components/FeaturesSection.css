@@ -47,7 +47,7 @@
   transform: rotateY(180deg);
 }
 
-/* Front and back card styling */
+
 .feature-card-front,
 .feature-card-back {
   position: absolute;
@@ -163,7 +163,7 @@
   margin-top: auto !important;
 }
 
-/* Alternative approach without !important - more specific selector */
+
 .features-section .know-more {
   background: #e8efff;
   border: none;
@@ -194,7 +194,7 @@
   outline-offset: 2px;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
   .features-grid {
     gap: 2rem;

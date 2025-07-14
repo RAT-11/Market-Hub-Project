@@ -4,13 +4,13 @@
 
 
 import React from 'react';
-import heroImg from '../assets/hero-image.png'; // 👈 your image goes here
+import heroImg from '../assets/hero-image.png'; 
 
 function HeroSection() {
   return (
     <section className="hero">
       <div className="hero-text">
-        {/* Badge Component */}
+       
         <div className="marketplace-badge">
           <span className="badge-icon">⭐</span>
           <span className="badge-text">#1 Marketplace Platform</span>
@@ -27,14 +27,14 @@ function HeroSection() {
         </p>
         <button className="explore-btn">Explore Now</button>
 
-        {/* Statistics Section */}
+        
         <div className="stats-section">
           <div className="stat-item">
-            <div className="stat-number">50K+</div>
+            <div className="stat-number">50+</div>
             <div className="stat-label">Active Users</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">100K+</div>
+            <div className="stat-number">100+</div>
             <div className="stat-label">Products</div>
           </div>
           <div className="stat-item">

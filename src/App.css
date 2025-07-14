@@ -104,7 +104,7 @@ body {
   transform: translateY(-1px); 
 }
 
-/* Hero section */
+
 .hero {   
   display: flex;   
   justify-content: space-between;   
@@ -121,7 +121,7 @@ body {
   max-width: 50%; 
 }
 
-/* Marketplace Badge */
+
 .marketplace-badge {
   display: inline-flex;
   align-items: center;
@@ -215,7 +215,7 @@ body {
   border-radius: var(--radius); 
 }
 
-/* Mobile responsive */
+
 @media (max-width: 768px) {   
   .hero {     
     flex-direction: column;     

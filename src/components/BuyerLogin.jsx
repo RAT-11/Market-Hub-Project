@@ -42,10 +42,10 @@ function BuyerLogin() {
     setIsLoading(true);
     
     try {
-      // Simulate API call
+      
       await new Promise(resolve => setTimeout(resolve, 2000));
       console.log('Login attempted with:', { email, password });
-      // Handle successful login here
+      
     } catch (error) {
       console.error('Login failed:', error);
       setErrors({ general: 'Login failed. Please try again.' });
@@ -56,7 +56,7 @@ function BuyerLogin() {
 
   const handleSocialLogin = (platform) => {
     console.log(`${platform} login clicked`);
-    // Implement social login logic here
+    
   };
 
   return (

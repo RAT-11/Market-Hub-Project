@@ -428,7 +428,7 @@
   }
   
   .login-illustration img {
-    max-width: 250px; /* Responsive size but still bigger */
+    max-width: 250px; 
   }
   
   .login-form-container {
@@ -460,7 +460,7 @@
   }
   
   .login-illustration img {
-    max-width: 200px; /* Still bigger than before even on mobile */
+    max-width: 200px; 
   }
   
   .login-form-container {
