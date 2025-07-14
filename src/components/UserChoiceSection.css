@@ -1,0 +1,62 @@
+.user-choice {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #fff;
+  border-radius: 2rem;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+  margin: 3rem 2rem;
+}
+
+.user-card {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.user-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.user-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.continue-btn {
+  background-color: #e3edff;
+  color: #407BFF;
+  border: 2px solid #a3c3ff;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+}
+
+.continue-btn:hover {
+  background-color: #d3e2ff;
+}
+
+.register-text {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.register-text a {
+  color: #407BFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.divider {
+  width: 1px;
+  height: 250px;
+  background-color: #ccc;
+}
