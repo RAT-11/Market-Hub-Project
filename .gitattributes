@@ -1,0 +1,10 @@
+# Auto normalize all text files to LF on commit
+* text=auto
+
+# Specific overrides for important text-based files
+*.js text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+*.md text eol=lf
