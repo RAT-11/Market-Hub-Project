@@ -5,12 +5,12 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header/Header.jsx'; // Adjust path to your Header component
-import Footer from './components/Footer/Footer.jsx'; // Adjust path to your Footer component
-import HomePage from './LandingPages/LandingPage/HomePage';
-import { SellerLogin, BuyerLogin } from './LandingPages/LandingPage/HomePage';
+import Header from './components/Header/Header.jsx'; 
+import Footer from './components/Footer/Footer.jsx'; 
+import HomePage from './Pages/LandingPage/HomePage.jsx';
+import { SellerLogin, BuyerLogin } from './Pages/LandingPage/HomePage.jsx';
 
-// Create a wrapper component to use useLocation hook
+
 function AppContent() {
   const location = useLocation();
   const isLoginPage = location.pathname.includes('login');
