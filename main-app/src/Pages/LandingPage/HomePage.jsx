@@ -704,7 +704,7 @@ function BuyerLogin() {
   );
 }
 
-// MAIN HOMEPAGE COMPONENT - This combines all sections
+// MAIN HOMEPAGE COMPONENT - This combines all the sections
 function HomePage() {
   return (
     <div className="homepage">
@@ -717,7 +717,7 @@ function HomePage() {
   );
 }
 
-// Export individual components and main HomePage
+// Exporting individual components and main HomePage
 export {
   HeroSection,
   FeaturesSection,

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './Footer.css';
-import { FaArrowUp, FaCheckCircle, FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
+import { FaArrowUp, FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
 
 function Footer() {
   const scrollToTop = () => {
@@ -53,17 +53,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* <div className="footer-cta">
-          <h3>Boost your Sales by Joining Us Today !</h3>
-          <ul>
-            <li><FaCheckCircle className="check-icon" /> Get discount</li>
-            <li><FaCheckCircle className="check-icon" /> Connect with us</li>
-          </ul>
-          <div className="footer-buttons">
-            <button className="btn-dark">Get in touch</button>
-            <button className="btn-primary">Book a call</button>
-          </div>
-        </div>*/}
+        
       </div>
 
       <div className="footer-bottom">
