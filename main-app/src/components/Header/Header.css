@@ -1,3 +1,5 @@
+
+
 :root {
   --primary-color: #407BFF;
   --text-color: #000;
@@ -7,6 +9,7 @@
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   --radius: 6px;
   --transition: all 0.3s ease-in-out;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .navbar {
@@ -16,7 +19,8 @@
   padding: 1.2rem 2rem;
   background-color: var(--hero-bg);
   border-radius: 15px;
- box-shadow: 0px 3px 4px rgba(0, 0, 1, 0.13);
+  box-shadow: 0px 3px 4px rgba(0, 0, 1, 0.13);
+  font-family: var(--font-family);
 }
 
 .logo {
@@ -27,6 +31,7 @@
   transition: var(--transition);
   padding: 0.5rem;
   border-radius: 8px;
+  font-family: var(--font-family);
 }
 
 .logo:hover {
@@ -55,6 +60,7 @@
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: var(--transition);
+  font-family: var(--font-family);
 }
 
 .nav-links a:hover {
@@ -72,6 +78,7 @@
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   border: 1px solid var(--border-color);
+  font-family: var(--font-family);
 }
 
 .call-btn {
@@ -80,6 +87,7 @@
   border: none;
   background-color: #f9dfe3;
   border-radius: 6px;
+  font-family: var(--font-family);
 }
 
 .cta-btn {
@@ -90,6 +98,7 @@
   border-radius: 6px;
   font-weight: 600;
   transition: var(--transition);
+  font-family: var(--font-family);
 }
 
 .cta-btn:hover {
