@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './HomePage.css';
+import {FaCheckCircle } from 'react-icons/fa';
 import heroImg from '../../assets/hero-image.png'; 
 import buyerImg from '../../assets/buyer.svg';
 import sellerImg from '../../assets/seller.svg';
@@ -23,43 +24,43 @@ const loadLordIcon = () => {
 const features = [
   {
     icon: "https://cdn.lordicon.com/fmdwwfgs.json",
-    title: "Instant Messaging System",
+    title: "Instant Messaging System, connect to your buyer seller efficiently and super quickly",
     backContent: "Secure, real-time messaging with live chat analytics and user engagement tracking.",
   },
   {
     icon: "https://cdn.lordicon.com/xowcggal.json",
-    title: "Real-Time Insights",
+    title: "Real-Time Insights.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatibus!",
     backContent: "Track your sales, inventory, and customer trends with powerful analytics tools.",
   },
   {
     icon: "https://cdn.lordicon.com/abhwievu.json",
-    title: "24/7 Support",
+    title: "24/7 Support.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatibus!",
     backContent: "Get help whenever you need it from our dedicated support team, day or night.",
   },
   {
     icon: "https://cdn.lordicon.com/jvucoldz.json",
-    title: "Global Reach",
+    title: "Global Reach.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, voluptatibus!",
     backContent: "Expand your business globally with our platform designed for international markets and diverse audiences.",
   }
 ];
 
-const steps = [
-  {
-    title: 'Register',
-    desc: 'Create an account in minutes to start selling or buying.',
-    icon: 'https://cdn.lordicon.com/jjoolpwc.json'
-  },
-  {
-    title: 'List & Discover',
-    desc: 'List your products or explore curated listings effortlessly.',
-    icon: 'https://cdn.lordicon.com/kthelypq.json'
-  },
-  {
-    title: 'Get Support',
-    desc: '24/7 customer assistance to help you at every step.',
-    icon: 'https://cdn.lordicon.com/ssvybplt.json'
-  }
-];
+// const steps = [
+//   {
+//     title: 'Register',
+//     desc: 'Create an account in minutes to start selling or buying.',
+//     icon: 'https://cdn.lordicon.com/jjoolpwc.json'
+//   },
+//   {
+//     title: 'List & Discover',
+//     desc: 'List your products or explore curated listings effortlessly.',
+//     icon: 'https://cdn.lordicon.com/kthelypq.json'
+//   },
+//   {
+//     title: 'Get Support',
+//     desc: '24/7 customer assistance to help you at every step.',
+//     icon: 'https://cdn.lordicon.com/ssvybplt.json'
+//   }
+// ];
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -221,7 +222,32 @@ function UserChoiceSection() {
 }
 
 
-// How It Works Section Component
+
+// How it works Section
+const steps = [
+  {
+    icon: "👤",
+    title: "Register",
+    desc: "Create an account in minutes to start selling or buying.",
+    bgColor: "linear-gradient(135deg, #FF6B6B, #FF8E53)",
+    shadowColor: "rgba(255, 107, 107, 0.4)"
+  },
+  {
+    icon: "🔍",
+    title: "List & Discover", 
+    desc: "List your products or explore curated listings effortlessly.",
+    bgColor: "linear-gradient(135deg, #4ECDC4, #44A08D)",
+    shadowColor: "rgba(78, 205, 196, 0.4)"
+  },
+  {
+    icon: "🛟",
+    title: "Get Support",
+    desc: "24/7 customer assistance to help you at every step.",
+    bgColor: "linear-gradient(135deg, #A8E6CF, #7FDBDA)",
+    shadowColor: "rgba(168, 230, 207, 0.4)"
+  }
+];
+
 function HowItWorksSection() {
   return (
     <>
@@ -239,41 +265,43 @@ function HowItWorksSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            How <span className="underline">Market<span className="blue">Hub</span></span> Works ?
+            How <span className="underline">Market<span className="blue">Hub</span></span> Works?
           </motion.h2>
-
+          
           <motion.p
+            className="how-subtitle"
             initial={{ opacity: 0, y: -10 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
           >
             See how it is easy to connect and trade
           </motion.p>
-
+          
           {steps.map((step, i) => (
             <motion.div
               className="how-step"
               variants={stepVariants}
               key={i}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              style={{ '--shadow-color': step.shadowColor }}
             >
-              <div className="how-icon">
-                <lord-icon
-                  src={step.icon}
-                  trigger="hover"
-                  stroke="bold"
-                  colors="primary:#121331,secondary:#08a88a"
-                  style={{ width: '40px', height: '40px' }}
-                ></lord-icon>
+              <div 
+                className="how-icon colorful-icon"
+                style={{
+                  background: step.bgColor,
+                  boxShadow: `0 8px 20px ${step.shadowColor}`
+                }}
+              >
+                <span className="icon-emoji">{step.icon}</span>
               </div>
-              <div>
-                <h4>{step.title}</h4>
-                <p>{step.desc}</p>
+              <div className="step-content">
+                <h4 className="step-title">{step.title}</h4>
+                <p className="step-desc">{step.desc}</p>
               </div>
             </motion.div>
           ))}
         </motion.div>
-
+        
         <motion.div 
           className="how-right"
           initial={{ opacity: 0, scale: 0.9, y: 30 }}
@@ -282,13 +310,14 @@ function HowItWorksSection() {
           transition={{ type: 'spring', stiffness: 80, damping: 15, delay: 0.2 }}
         >
           <motion.img 
-            src={howItWorksImg} 
+            src={howItWorksImg}
             alt="How MarketHub Works"
+            className="how-image"
             whileHover={{ y: -5, transition: { duration: 0.3 } }}
           />
         </motion.div>
       </section>
-
+      
       {/* Still Questions Section */}
       <section className="still-questions">
         <motion.div
@@ -298,7 +327,7 @@ function HowItWorksSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h3>Still questions ?</h3>
+          <h3>Still questions?</h3>
           <motion.button 
             className="demo-btn"
             whileHover={{ scale: 1.05 }}
@@ -308,10 +337,26 @@ function HowItWorksSection() {
             Request a Demo. ↗
           </motion.button>
         </motion.div>
+        <div className="footer-cta">
+          <h3>Boost your Sales by Joining Us Today!</h3>
+          <ul>
+            <li><FaCheckCircle className="check-icon" /> Get discount</li>
+            <li><FaCheckCircle className="check-icon" /> Connect with us</li>
+          </ul>
+          <div className="footer-buttons">
+            <button className="btn-dark">Get in touch</button>
+            <button className="btn-primary">Book a call</button>
+          </div>
+        </div>
       </section>
     </>
   );
 }
+
+
+
+
+
 
 // Seller Login Component
 function SellerLogin() {
@@ -641,15 +686,7 @@ function BuyerLogin() {
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
               </button>
-              {/* <button 
-                className="social-btn twitter"
-                onClick={() => handleSocialLogin('Twitter')}
-                type="button"
-              >
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                </svg>
-              </button> */}
+              
               <button                  
                 className="social-btn twitter"                 
                 onClick={() => handleSocialLogin('X')}                 
